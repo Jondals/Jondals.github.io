@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Test>
+    <Pregunta>
+        <Titulo>1.- ¿Qué significa OOP en programación?</Titulo>
+        <Respuesta correcta="false">Operaciones Orientadas al Procesador</Respuesta>
+        <Respuesta correcta="false">Organización de Objetos en Procesos</Respuesta>
+        <Respuesta correcta="true">Programación Orientada a Objetos</Respuesta>
+        <Respuesta correcta="false">Optimización Operacional de Procesos</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>2.- ¿Cuál de los siguientes es un lenguaje de programación orientado a objetos?</Titulo>
+        <Respuesta correcta="true">Java</Respuesta>
+        <Respuesta correcta="false">HTML</Respuesta>
+        <Respuesta correcta="false">CSS</Respuesta>
+        <Respuesta correcta="false">SQL</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>3.- ¿Qué es una función recursiva?</Titulo>
+        <Respuesta correcta="false">Una función que no tiene parámetros</Respuesta>
+        <Respuesta correcta="true">Una función que se llama a sí misma</Respuesta>
+        <Respuesta correcta="false">Una función que no retorna ningún valor</Respuesta>
+        <Respuesta correcta="false">Una función que se ejecuta de manera paralela</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>4.- ¿Cuál es el valor de una variable no inicializada en C#?</Titulo>
+        <Respuesta correcta="false">0</Respuesta>
+        <Respuesta correcta="false">null</Respuesta>
+        <Respuesta correcta="false">false</Respuesta>
+        <Respuesta correcta="true">Depende del tipo de variable</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>5.- ¿Qué significa el término "polimorfismo" en programación orientada a objetos?</Titulo>
+        <Respuesta correcta="true">Capacidad de una función de tomar múltiples formas</Respuesta>
+        <Respuesta correcta="false">Capacidad de heredar atributos</Respuesta>
+        <Respuesta correcta="false">Uso de múltiples clases en un proyecto</Respuesta>
+        <Respuesta correcta="false">Capacidad de crear objetos anónimos</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>6.- ¿Qué estructura de datos utiliza el principio "Last In, First Out" (LIFO)?</Titulo>
+        <Respuesta correcta="true">Pila (Stack)</Respuesta>
+        <Respuesta correcta="false">Cola (Queue)</Respuesta>
+        <Respuesta correcta="false">Lista enlazada</Respuesta>
+        <Respuesta correcta="false">Árbol binario</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>7.- ¿Qué es un "bug" en programación?</Titulo>
+        <Respuesta correcta="false">Un tipo de variable</Respuesta>
+        <Respuesta correcta="false">Una característica de un lenguaje</Respuesta>
+        <Respuesta correcta="true">Un error en el código</Respuesta>
+        <Respuesta correcta="false">Una función desconocida</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>8.- ¿Cuál de los siguientes es un lenguaje de programación funcional?</Titulo>
+        <Respuesta correcta="true">Haskell</Respuesta>
+        <Respuesta correcta="false">C++</Respuesta>
+        <Respuesta correcta="false">Python</Respuesta>
+        <Respuesta correcta="false">Java</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>9.- ¿Cuál es el propósito del comando "git commit" en Git?</Titulo>
+        <Respuesta correcta="false">Subir cambios al repositorio remoto</Respuesta>
+        <Respuesta correcta="true">Guardar cambios en el repositorio local</Respuesta>
+        <Respuesta correcta="false">Crear un nuevo repositorio</Respuesta>
+        <Respuesta correcta="false">Eliminar cambios del repositorio</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>10.- ¿Qué operador se utiliza para comparar si dos valores son iguales en JavaScript?</Titulo>
+        <Respuesta correcta="false">=</Respuesta>
+        <Respuesta correcta="false">===</Respuesta>
+        <Respuesta correcta="true">==</Respuesta>
+        <Respuesta correcta="false">!=</Respuesta>
+    </Pregunta>
+</Test>
