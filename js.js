@@ -6,9 +6,14 @@ var actualtheme;
 var isReviewMode = false; 
 var roullete_theme = document.getElementById("roullete_theme");
 var backgroundMusic = document.getElementById("backgroundMusic");
-var backgroundQuiz = document.getElementById("backgroundQuiz");
-backgroundMusic.volume = 1.0;
-backgroundQuiz.volume = 1.0;
+var success = document.getElementById("success");
+var fault = document.getElementById("fault");
+var spin_sound = document.getElementById("spin_roullete_sfx");
+var theme_selection = document.getElementById("theme_selection");
+success.volume = 1.0;
+fault.volume = 1.0;
+spin_roullete_sfx.volume = 1.0;
+theme_selection.volume = 1.0;
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 const themeBackgroundColors = 
@@ -131,10 +136,11 @@ function showRoulette()
 
 function roulette() 
 {
+    backgroundMusic.volume = 1;
     roullete_theme.style.color = "#e1d7c0";
     document.getElementById("spin_roullete").disabled = true;
 
-    var totalRotations = Math.floor(Math.random() * 3000) + 800;
+    var totalRotations = Math.floor(Math.random() * 3000) + 1500;
 
     //360 = 8 sectores * 45 grados cada sector
     var finalRotation = totalRotations % 360;
@@ -196,7 +202,7 @@ function roulette()
 
     rouletteImage.style.transition = "transform 4s ease-in-out";
     rouletteImage.style.transform = "rotate(" + totalRotations + "deg)";
-
+    spin_sound.play();
     
     setTimeout(function() 
     {
@@ -204,13 +210,15 @@ function roulette()
         {
             roullete_theme.innerHTML = temaSeleccionado;
             roullete_theme.style.color = "black";
+            backgroundMusic.volume = 0.2;
+            theme_selection.play();
         }
 
         setTimeout(function()
         {
             backgroundMusic.pause();
             backgroundMusic.currentTime = 0;
-            document.getElementById("spin_roullete").disabled = false;
+            document.getElementById("spin_roullete_sfx").disabled = false;
             cargarXML(temaSeleccionado);
         },1500);
         
@@ -223,7 +231,7 @@ function showQuestion(index)
     var questions = xmlDoc.getElementsByTagName("Pregunta");
     var actualQuestion = questions[index];
     backgroundQuiz.play();
-    
+
     //titulo
     var questionTitle = actualQuestion.getElementsByTagName("Titulo")[0].childNodes[0].nodeValue;
     document.getElementById("question_HTML").innerHTML = '<h3>' + questionTitle + '</h3>';
@@ -251,7 +259,7 @@ function showQuestion(index)
             if (userResponse && userResponse.selectedOptionIndex === i) //seleccionado haciendo el cuestionario
             {
                 if(isCorrect)
-                {
+                {   
                     button.classList.add("btn-success");
                     button.classList.remove("btn-primary", "btn-danger");
                 } 
@@ -324,11 +332,17 @@ function seleccionarRespuesta(selectedOptionIndex, isCorrect, buttonElement)
     //si es correcta o no se aplican los estilos succes o danger
     if (isCorrect) 
     {
+        success.pause();
+        success.currentTime = 0;
+        success.play();
         buttonElement.classList.add("btn-success");
         buttonElement.classList.remove("btn-primary", "btn-danger");
     } 
     else 
     {
+        fault.pause();
+        fault.currentTime = 0;
+        fault.play();
         buttonElement.classList.add("btn-danger");
         buttonElement.classList.remove("btn-primary", "btn-success");
         mostrarRespuestaCorrecta();
@@ -452,6 +466,13 @@ function reload()
     currentQuestion = 0;
     userResponses = [];
     roullete_theme.style.color = "#e1d7c0";
+
+    backgroundMusic.pause();
+    backgroundMusic.currentTime = 0;
+    backgroundQuiz.pause();
+    backgroundQuiz.currentTime = 0;
+
+    backgroundMusic.play();
 
     document.getElementById("check").innerHTML = '';
 
