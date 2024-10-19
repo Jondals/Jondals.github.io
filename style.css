@@ -14,7 +14,6 @@ html, body
     font-size: 1em;
 }
 
-
 #general
 {
     background-color:  #e1d7c0;
@@ -84,7 +83,6 @@ html, body
     margin-top: 20px; 
 }
 
-
 /* cuestionario */
 #head {
     background-color: #f9dcdc; 
@@ -110,17 +108,17 @@ html, body
     background-color: #3b3b3b;
     border-radius: 20px;
     border: 0.3vh solid #b7b7b7;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    align-items: center; 
+    align-items: center;
     justify-content: space-evenly;
-    padding: 0;
-    height: 40%;
+    padding: 2vh;
     width: 70%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding-top: 2vh;
     transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
+    min-height: 45vh;
 }
 
 /* botones */

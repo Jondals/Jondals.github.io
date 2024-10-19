@@ -6,15 +6,17 @@ var actualtheme;
 var isReviewMode = false; 
 var roullete_theme = document.getElementById("roullete_theme");
 var backgroundMusic = document.getElementById("backgroundMusic");
+var backgroundResults = document.getElementById("backgroundResults");
 var success = document.getElementById("success");
 var fault = document.getElementById("fault");
 var spin_sound = document.getElementById("spin_roullete_sfx");
 var theme_selection = document.getElementById("theme_selection");
 backgroundQuiz.volume = 0.7;
 backgroundMusic.volume = 0.6;
+backgroundResults.volume = 0.6;
 roullete_theme.volume = 0.7;
-success.volume = 1.0;
-fault.volume = 1.0;
+success.volume = 0.5;
+fault.volume = 0.5;
 spin_roullete_sfx.volume = 1.0;
 theme_selection.volume = 1.0;
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
@@ -255,6 +257,7 @@ function showQuestion(index)
 
         if (isReviewMode) //si esta en modo edicion (boton final revisar)
         {
+            backgroundQuiz.pause();
             //pone todos los botones disabled
             button.disabled = true;
             
@@ -399,6 +402,9 @@ function entregarCuestionario()
     //mostrar respuestas
     if(currentQuestion == totalQuestions - 1)
     {
+        backgroundResults.play();
+        backgroundQuiz.pause();
+
         document.getElementById("head").hidden = true;
         document.getElementById("choose").hidden = true;
         document.getElementById("results").hidden = false;
@@ -417,7 +423,7 @@ function nextQuestion() //automatica
     }
 }
 
-function nextReviewQuestion() //boton
+function nextReviewQuestion() //revision next
 {
     if (currentQuestion < totalQuestions - 1) 
     {
@@ -426,7 +432,7 @@ function nextReviewQuestion() //boton
     }
 }
 
-function backReviewQuestion() //boton
+function backReviewQuestion() //revision back
 {
     if (currentQuestion > 0) 
     {
@@ -468,12 +474,17 @@ function resetButtonStyles(themeClass)
 
 function reload() 
 {
+    isReviewMode = false; 
     currentQuestion = 0;
     userResponses = [];
     roullete_theme.style.color = "#e1d7c0";
 
+    backgroundResults.pause();
+    backgroundResults.currentTime = 0;
+
     backgroundMusic.pause();
     backgroundMusic.currentTime = 0;
+
     backgroundQuiz.pause();
     backgroundQuiz.currentTime = 0;
 
@@ -516,8 +527,8 @@ function showAgain()
     document.getElementById("review").hidden = false;
     document.getElementById("results").hidden = true;
 
-    document.getElementById("nextReviewButton").hidden = false;
-    document.getElementById("backReviewButton").hidden = false;
+    document.getElementById("next").hidden = false;
+    document.getElementById("back").hidden = false;
 
     showQuestion(currentQuestion); 
 }
