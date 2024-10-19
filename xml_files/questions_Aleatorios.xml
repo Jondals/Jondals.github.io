@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Test>
+    <Pregunta>
+        <Titulo>1.- ¿Quién escribió la novela "1984"?</Titulo>
+        <Respuesta correcta="false">Aldous Huxley</Respuesta>
+        <Respuesta correcta="true">George Orwell</Respuesta>
+        <Respuesta correcta="false">Ray Bradbury</Respuesta>
+        <Respuesta correcta="false">J.R.R. Tolkien</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>2.- ¿Cuál es el planeta más cercano al Sol?</Titulo>
+        <Respuesta correcta="true">Mercurio</Respuesta>
+        <Respuesta correcta="false">Venus</Respuesta>
+        <Respuesta correcta="false">Marte</Respuesta>
+        <Respuesta correcta="false">Tierra</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>3.- ¿Cuál es la fórmula química del agua?</Titulo>
+        <Respuesta correcta="false">CO₂</Respuesta>
+        <Respuesta correcta="false">O₂</Respuesta>
+        <Respuesta correcta="true">H₂O</Respuesta>
+        <Respuesta correcta="false">NaCl</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>4.- ¿En qué año se llevó a cabo la Revolución Francesa?</Titulo>
+        <Respuesta correcta="false">1776</Respuesta>
+        <Respuesta correcta="true">1789</Respuesta>
+        <Respuesta correcta="false">1812</Respuesta>
+        <Respuesta correcta="false">1804</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>5.- ¿Qué instrumento mide la presión atmosférica?</Titulo>
+        <Respuesta correcta="true">Barómetro</Respuesta>
+        <Respuesta correcta="false">Termómetro</Respuesta>
+        <Respuesta correcta="false">Anemómetro</Respuesta>
+        <Respuesta correcta="false">Higrómetro</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>6.- ¿Quién fue el primer presidente de los Estados Unidos?</Titulo>
+        <Respuesta correcta="false">Abraham Lincoln</Respuesta>
+        <Respuesta correcta="false">Thomas Jefferson</Respuesta>
+        <Respuesta correcta="false">John Adams</Respuesta>
+        <Respuesta correcta="true">George Washington</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>7.- ¿Cuál es el símbolo químico del oro?</Titulo>
+        <Respuesta correcta="true">Au</Respuesta>
+        <Respuesta correcta="false">Ag</Respuesta>
+        <Respuesta correcta="false">Fe</Respuesta>
+        <Respuesta correcta="false">Pb</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>8.- ¿Qué artista pintó la Mona Lisa?</Titulo>
+        <Respuesta correcta="false">Pablo Picasso</Respuesta>
+        <Respuesta correcta="true">Leonardo da Vinci</Respuesta>
+        <Respuesta correcta="false">Vincent van Gogh</Respuesta>
+        <Respuesta correcta="false">Claude Monet</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>9.- ¿Cuál es el idioma oficial de Brasil?</Titulo>
+        <Respuesta correcta="true">Portugués</Respuesta>
+        <Respuesta correcta="false">Español</Respuesta>
+        <Respuesta correcta="false">Inglés</Respuesta>
+        <Respuesta correcta="false">Francés</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>10.- ¿Cuál es la capital de Japón?</Titulo>
+        <Respuesta correcta="false">Osaka</Respuesta>
+        <Respuesta correcta="false">Kioto</Respuesta>
+        <Respuesta correcta="true">Tokio</Respuesta>
+        <Respuesta correcta="false">Nagasaki</Respuesta>
+    </Pregunta>
+</Test>

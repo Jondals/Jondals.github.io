@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Test>
+    <Pregunta>
+        <Titulo>1.- ¿Cuál es el elemento más abundante en el universo?</Titulo>
+        <Respuesta correcta="true">Hidrógeno</Respuesta>
+        <Respuesta correcta="false">Oxígeno</Respuesta>
+        <Respuesta correcta="false">Helio</Respuesta>
+        <Respuesta correcta="false">Carbono</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>2.- ¿Qué órgano del cuerpo humano consume más energía?</Titulo>
+        <Respuesta correcta="false">Corazón</Respuesta>
+        <Respuesta correcta="false">Pulmones</Respuesta>
+        <Respuesta correcta="true">Cerebro</Respuesta>
+        <Respuesta correcta="false">Hígado</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>3.- ¿Qué teoría explica el origen del universo?</Titulo>
+        <Respuesta correcta="false">Teoría de la Relatividad</Respuesta>
+        <Respuesta correcta="false">Teoría de la Evolución</Respuesta>
+        <Respuesta correcta="false">Teoría de la Deriva Continental</Respuesta>
+        <Respuesta correcta="true">Teoría del Big Bang</Respuesta> 
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>4.- ¿Cuál es el planeta más grande del sistema solar?</Titulo>
+        <Respuesta correcta="true">Júpiter</Respuesta> 
+        <Respuesta correcta="false">Saturno</Respuesta>
+        <Respuesta correcta="false">Tierra</Respuesta>
+        <Respuesta correcta="false">Marte</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>5.- ¿Qué tipo de célula es la responsable del transporte de oxígeno en la sangre?</Titulo>
+        <Respuesta correcta="false">Glóbulos blancos</Respuesta>
+        <Respuesta correcta="true">Glóbulos rojos</Respuesta> 
+        <Respuesta correcta="false">Plaquetas</Respuesta>
+        <Respuesta correcta="false">Neuronas</Respuesta>
+    </Pregunta>
+
+    <Pregunta>
+        <Titulo>6.- ¿Qué fenómeno físico explica por qué los objetos caen hacia el suelo?</Titulo>
+        <Respuesta correcta="true">Gravedad</Respuesta>
+        <Respuesta correcta="false">Electromagnetismo</Respuesta>
+        <Respuesta correcta="false">Inercia</Respuesta>
+        <Respuesta correcta="false">Fricción</Respuesta>
+    </Pregunta>
+    
+    <Pregunta>
+        <Titulo>7.- ¿Cuál es la molécula que almacena la información genética en los seres vivos?</Titulo>
+        <Respuesta correcta="false">ARN</Respuesta>
+        <Respuesta correcta="false">Proteínas</Respuesta>
+        <Respuesta correcta="true">ADN</Respuesta>
+        <Respuesta correcta="false">Glucosa</Respuesta>
+    </Pregunta>
+    
+    <Pregunta>
+        <Titulo>8.- ¿Qué científico es conocido por formular la ley de la gravedad?</Titulo>
+        <Respuesta correcta="false">Albert Einstein</Respuesta>
+        <Respuesta correcta="false">Galileo Galilei</Respuesta>
+        <Respuesta correcta="false">Niels Bohr</Respuesta>
+        <Respuesta correcta="true">Isaac Newton</Respuesta>
+    </Pregunta>
+    
+    <Pregunta>
+        <Titulo>9.- ¿Cuál es el gas principal en la atmósfera terrestre?</Titulo>
+        <Respuesta correcta="true">Nitrógeno</Respuesta>
+        <Respuesta correcta="false">Oxígeno</Respuesta>
+        <Respuesta correcta="false">Dióxido de carbono</Respuesta>
+        <Respuesta correcta="false">Helio</Respuesta>
+    </Pregunta>
+    
+    <Pregunta>
+        <Titulo>10.- ¿Cuál es el nombre del proceso por el cual las plantas producen su propio alimento?</Titulo>
+        <Respuesta correcta="false">Respiración</Respuesta>
+        <Respuesta correcta="true">Fotosíntesis</Respuesta>
+        <Respuesta correcta="false">Fermentación</Respuesta>
+        <Respuesta correcta="false">Quimiosíntesis</Respuesta>
+    </Pregunta>
+</Test>

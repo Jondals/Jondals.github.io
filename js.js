@@ -10,6 +10,9 @@ var success = document.getElementById("success");
 var fault = document.getElementById("fault");
 var spin_sound = document.getElementById("spin_roullete_sfx");
 var theme_selection = document.getElementById("theme_selection");
+backgroundQuiz.volume = 0.7;
+backgroundMusic.volume = 0.6;
+roullete_theme.volume = 0.7;
 success.volume = 1.0;
 fault.volume = 1.0;
 spin_roullete_sfx.volume = 1.0;
@@ -46,51 +49,53 @@ function cargarXML(tema)
     switch (tema) 
     {
         case "Tema 1: Al azar":
-            xmlFile = "questions_Aleatorios.xml";
+            xmlFile = "xml_files/questions_Aleatorios.xml";
             themeClass = "theme1";
-            document.getElementById("general").style.backgroundColor = "#FFFAF0";
+            document.getElementById("general").style.backgroundColor = "#FFF3E0";
+            document.getElementById("head").style.backgroundColor = "#FFF3E0";
+            document.getElementById("choose").style.backgroundColor = "#FFF3E0";
             break;
 
         case "Tema 2: Historia":
-            xmlFile = "questions_Historia.xml";
+            xmlFile = "xml_files/questions_Historia.xml";
             themeClass = "theme2";
-            document.getElementById("general").style.backgroundColor = "#FFF7D6";
+            document.getElementById("general").style.backgroundColor = "#FFF9C4";
             break;
 
         case "Tema 3: Ciencia":
-            xmlFile = "questions_Ciencia.xml";
+            xmlFile = "xml_files/questions_Ciencia.xml";
             themeClass = "theme3";
-            document.getElementById("general").style.backgroundColor = "#E3F2FD";
+            document.getElementById("general").style.backgroundColor = "#E1F5FE";
             break;
 
         case "Tema 4: Mecanica":
-            xmlFile = "questions_Mecanica.xml";
+            xmlFile = "xml_files/questions_Mecanica.xml";
             themeClass = "theme4";
             document.getElementById("general").style.backgroundColor = "#E0F7FA";
             break;
 
         case "Tema 5: Geografia":
-            xmlFile = "questions_Geografia.xml";
+            xmlFile = "xml_files/questions_Geografia.xml";
             themeClass = "theme5";
             document.getElementById("general").style.backgroundColor = "#E8F5E9";
             break;
 
         case "Tema 6: Programacion":
-            xmlFile = "questions_Programacion.xml";
+            xmlFile = "xml_files/questions_Programacion.xml";
             themeClass = "theme6";
-            document.getElementById("general").style.backgroundColor = "#FFE0B2";
+            document.getElementById("general").style.backgroundColor = "#FFECB3";
             break;
 
         case "Tema 7: Comida":
-            xmlFile = "questions_Comida.xml";
+            xmlFile = "xml_files/questions_Comida.xml";
             themeClass = "theme7";
-            document.getElementById("general").style.backgroundColor = "#FCE4EC";
+            document.getElementById("general").style.backgroundColor = "#F8BBD0";
             break;
 
         case "Tema 8: Deportes":
-            xmlFile = "questions_Deportes.xml";
+            xmlFile = "xml_files/questions_Deportes.xml";
             themeClass = "theme8";
-            document.getElementById("general").style.backgroundColor = "#E3F2FD";
+            document.getElementById("general").style.backgroundColor = "#D1C4E9";
             break;
     }
 
@@ -136,7 +141,6 @@ function showRoulette()
 
 function roulette() 
 {
-    backgroundMusic.volume = 1;
     roullete_theme.style.color = "#e1d7c0";
     document.getElementById("spin_roullete").disabled = true;
 
@@ -203,7 +207,7 @@ function roulette()
     rouletteImage.style.transition = "transform 4s ease-in-out";
     rouletteImage.style.transform = "rotate(" + totalRotations + "deg)";
     spin_sound.play();
-    
+    spin_sound.volume = 0.5;
     setTimeout(function() 
     {
         if(roullete_theme)
@@ -211,6 +215,8 @@ function roulette()
             roullete_theme.innerHTML = temaSeleccionado;
             roullete_theme.style.color = "black";
             backgroundMusic.volume = 0.2;
+            spin_sound.pause();
+            spin_sound.currentTime = 0;
             theme_selection.play();
         }
 
@@ -218,9 +224,8 @@ function roulette()
         {
             backgroundMusic.pause();
             backgroundMusic.currentTime = 0;
-            document.getElementById("spin_roullete_sfx").disabled = false;
             cargarXML(temaSeleccionado);
-        },1500);
+        },2000);
         
         
     }, 4000);//4s
