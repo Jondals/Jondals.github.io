@@ -5,6 +5,10 @@ var userResponses = [];
 var actualtheme;
 var isReviewMode = false; 
 var roullete_theme = document.getElementById("roullete_theme");
+var backgroundMusic = document.getElementById("backgroundMusic");
+var backgroundQuiz = document.getElementById("backgroundQuiz");
+backgroundMusic.volume = 1.0;
+backgroundQuiz.volume = 1.0;
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 const themeBackgroundColors = 
@@ -122,6 +126,7 @@ function showRoulette()
     document.getElementById('verify').hidden = true;
     document.getElementById("roulette-container").hidden = false;
     document.getElementById("general").hidden = false;
+    backgroundMusic.play();
 }
 
 function roulette() 
@@ -203,6 +208,8 @@ function roulette()
 
         setTimeout(function()
         {
+            backgroundMusic.pause();
+            backgroundMusic.currentTime = 0;
             document.getElementById("spin_roullete").disabled = false;
             cargarXML(temaSeleccionado);
         },1500);
@@ -215,7 +222,8 @@ function showQuestion(index)
 {
     var questions = xmlDoc.getElementsByTagName("Pregunta");
     var actualQuestion = questions[index];
-
+    backgroundQuiz.play();
+    
     //titulo
     var questionTitle = actualQuestion.getElementsByTagName("Titulo")[0].childNodes[0].nodeValue;
     document.getElementById("question_HTML").innerHTML = '<h3>' + questionTitle + '</h3>';
